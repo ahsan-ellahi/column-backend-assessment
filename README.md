@@ -5,7 +5,8 @@
     - The comments will be an entry in the Post table.
     - You will need a third table to manage the depth of the comments.
 
-# How to set-up the project:
+- Clone the repo using `git clone https://github.com/ahsan-ellahi/column-backend-assessment.git`
+# How to set-up the project with docker:
 
 - Install docker on your machine
 
@@ -13,3 +14,7 @@
 
     This command will install all the dependencies and app will be available at `localhost:4000` and at this url you will see graphql playground and you can run the queries and mutation as mentioned in graphql docs on this page as well.
 
+# Set up project with out docker: 
+ - Use node version = 14.0.0
+ - Run command `npm install`
+ - Run command `npm run dev`
