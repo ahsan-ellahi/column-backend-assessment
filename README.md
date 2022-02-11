@@ -18,3 +18,63 @@
  - Use node version = 14.0.0
  - Run command `npm install`
  - Run command `npm run dev`
+
+
+# Deployed API URL
+   - `https://column-blogger-api.herokuapp.com/`
+
+# Test Mutations and Queries
+
+
+```
+mutation CREATE_USER {
+  createUser(username: "test 1", name: "test user"){
+    id
+    name
+  }
+}
+
+mutation CREATE_POST {
+  createPost(content: "My first post", userId: 1){
+    id
+    content
+  }
+}
+
+mutation CREATE_COMMENT {
+  createComment(content: "My first comment", userId: 1, postId: 1){
+    id
+    content
+  }
+}
+
+mutation CREATE_REPLY  {
+  createReply(content: "My Reply", userId: 1, postId: 1, commentId: 1){
+    id
+    content
+  }
+}
+
+query GET_USER_WITH_POST_AND_COMMENT {
+  user(id:1){
+    name
+    posts {
+      content
+      comments {
+        content
+      }
+    }
+  }
+}
+
+query GET_POSTS_WITH_COMMENT {
+  post(id:1){
+    content
+    comments {
+      content
+    }
+  }
+}
+
+
+```
